@@ -1,9 +1,9 @@
 import React from "react";
-import Home from "./component/Home";
+import Home from "./Home";
 import { Route, Switch, Redirect } from "react-router-dom";
-import NotFound from "./component/NotFound";
-import PlayList from "./component/common/PlayList";
-import PdfList from "./component/common/PdfList";
+import NotFound from "./NotFound";
+import PlayList from "./common/PlayList";
+import PdfList from "./common/PdfList";
 
 const Routes = (props) => {
   return (

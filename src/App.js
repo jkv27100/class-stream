@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Routes from "./Routes";
+import Routes from "./component/Routes";
 class App extends Component {
   state = {
     subject: [
