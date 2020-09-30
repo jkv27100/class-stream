@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
-import "./card.css";
+import "../css/card.css";
 
 const SubjectCard = (props) => {
   return (

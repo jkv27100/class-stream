@@ -1,7 +1,7 @@
 import React from "react";
 import SubjectCard from "./SubjectCard";
 
-import "./home.css";
+import "../css/home.css";
 const Home = (props) => {
   return (
     <div className="container">
