@@ -23,6 +23,7 @@ const Routes = (props) => {
         />
       ))}
       <Route path="/notfound" component={NotFound} />
+
       <Route
         path="/"
         exact

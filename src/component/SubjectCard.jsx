@@ -1,45 +1,41 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
-
-const useStyles = makeStyles({
-  root: {
-    margin: 30,
-    display: "block",
-  },
-});
+import "./card.css";
 
 const SubjectCard = (props) => {
-  const classes = useStyles();
   return (
-    <Card className={classes.root}>
-      <CardContent>
-        <h2>{props.subName.code}</h2>
+    <div className="cards">
+      <div className="header">
         <h1>{props.subName.sub}</h1>
-      </CardContent>
-      <CardActions>
-        <Button
-          variant="outlined"
-          color="secondary"
-          component={Link}
-          to={`/${props.subName.code}pdf`}
-        >
-          Pdf
-        </Button>
-        <Button
-          variant="outlined"
-          color="primary"
-          component={Link}
-          to={`/${props.subName.code}videos`}
-        >
-          Videos
-        </Button>
-      </CardActions>
-    </Card>
+        <h2>{props.subName.code}</h2>
+      </div>
+      <div className="content">
+        <p>Check out Vidoes and Pdf of {props.subName.sub}</p>
+      </div>
+      <div className="bottom">
+        <div className="btn">
+          <Button
+            variant="contained"
+            color="secondary"
+            component={Link}
+            to={`/${props.subName.code}pdf`}
+          >
+            Pdf
+          </Button>
+        </div>
+        <div className="btn">
+          <Button
+            variant="contained"
+            color="primary"
+            component={Link}
+            to={`/${props.subName.code}videos`}
+          >
+            Videos
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 };
 export default SubjectCard;
