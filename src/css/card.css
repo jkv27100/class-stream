@@ -1,12 +1,12 @@
 .cards {
   border-radius: 10px;
-  background: rgb(255, 255, 255);
+  background: #0e1118;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   font-family: Arial, Helvetica, sans-serif;
 }
 .cards:hover {
-  transform: scale(1.15);
-  box-shadow: 5px 5px 15px rgba(71, 71, 71, 0.6);
+  transform: translate3d(0px, -10px, 0px);
+  box-shadow: 0px 19px 43px rgba(87, 86, 86, 0.6);
 }
 .cards {
   transition: 0.5s ease;
@@ -14,15 +14,15 @@
   margin: 30px;
 }
 h1 {
-  font-size: 30px;
+  font-size: 25px;
   margin-left: 10px;
 }
 h2 {
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 10px;
 }
 .header {
-  background: #dc2430;
+  background: #0e1118;
   color: white;
   padding: 5px;
 }
@@ -38,5 +38,5 @@ h2 {
   padding: 10px;
   margin: 10px 10px 0px 20px;
   font-size: 20px;
-  color: black;
+  color: white;
 }

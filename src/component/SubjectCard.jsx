@@ -18,6 +18,7 @@ const SubjectCard = (props) => {
           <Button
             variant="contained"
             color="secondary"
+            size="small"
             component={Link}
             to={`/${props.subName.code}pdf`}
           >
@@ -26,6 +27,7 @@ const SubjectCard = (props) => {
         </div>
         <div className="btn">
           <Button
+            size="small"
             variant="contained"
             color="primary"
             component={Link}
