@@ -1,9 +1,23 @@
-.container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.contain {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 200px;
+}
+.p {
+  font-size: 20px;
+  width: 80%;
+}
+.img {
+  height: 400px;
+  margin-right: 30px;
 }
 @media (max-width: 700px) {
-  .container {
-    grid-template-columns: 1fr;
+  .contain {
+    flex-direction: column;
   }
+}
+
+.h1 {
+  font-size: 40px;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Routes from "./component/Routes";
+import NavBar from "./component/NavBar";
 
 class App extends Component {
   state = {
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <NavBar />
         <Routes subject={this.state.subject} />
       </div>
     );
