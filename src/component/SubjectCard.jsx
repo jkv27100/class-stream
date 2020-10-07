@@ -1,20 +1,20 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
-import "../css/card.css";
+import styles from "../css/card.module.css";
 
 const SubjectCard = (props) => {
   return (
-    <div className="cards">
-      <div className="header">
-        <h1>{props.subName.sub}</h1>
-        <h2>{props.subName.code}</h2>
+    <div className={styles.cards}>
+      <div className={styles.header}>
+        <h1 className={styles.h1}>{props.subName.sub}</h1>
+        <h2 className={styles.h2}>{props.subName.code}</h2>
       </div>
-      <div className="content">
+      <div className={styles.content}>
         <p>Check out Vidoes and Pdf of {props.subName.sub}</p>
       </div>
-      <div className="bottom">
-        <div className="btn">
+      <div className={styles.bottom}>
+        <div className={styles.btn}>
           <Button
             variant="contained"
             color="secondary"
@@ -25,7 +25,7 @@ const SubjectCard = (props) => {
             Pdf
           </Button>
         </div>
-        <div className="btn">
+        <div className={styles.btn}>
           <Button
             size="small"
             variant="contained"

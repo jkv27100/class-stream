@@ -1,22 +1,39 @@
-import { Button } from "@material-ui/core";
 import React from "react";
-import "../css/home.css";
-import svg from "../Images/icon.svg";
-//import { Button } from "@material-ui/core";
+import styles from "../css/home.module.css";
+import main from "../Images/icon.svg";
+import facebook from "../Images/facebook.svg";
+import instagram from "../Images/instagram.svg";
+import reddit from "../Images/reddit.svg";
+import linkedin from "../Images/linkedin.svg";
+import github from "../Images/github.svg";
 
 const Home = (props) => {
   return (
-    <div className="contain">
-      <img className="img" src={svg} alt="svg" />
+    <div className={styles.container}>
+      <img className={styles.img} src={main} alt="svg" />
       <div>
-        <h1 className="h1">Welcome to Class Stream</h1>
-        <p className="p">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima,
-          neque!
+        <h1 className={styles.h1}>Welcome to Class Stream</h1>
+        <p className={styles.p}>
+          This website is created by chandler and monica. please support us on
+          below platforms. feel free to give your sugguestions
         </p>
-        <Button variant="contained" color="primary">
-          Click Me
-        </Button>
+        <div className={styles.icons}>
+          <a href="/facebook">
+            <img className={styles.icon} src={facebook} alt="fb" />
+            <a href="/facebook">
+              <img className={styles.icon} src={instagram} alt="fb" />
+            </a>
+            <a href="/facebook">
+              <img className={styles.icon} src={reddit} alt="fb" />
+            </a>
+            <a href="/facebook">
+              <img className={styles.icon} src={linkedin} alt="fb" />
+            </a>
+            <a href="/facebook">
+              <img className={styles.icon} src={github} alt="fb" />
+            </a>
+          </a>
+        </div>
       </div>
     </div>
   );
