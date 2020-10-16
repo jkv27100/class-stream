@@ -1,18 +1,30 @@
 import React from "react";
-import ReactPlayer from "react-player";
-import { makeStyles } from "@material-ui/core/styles";
+import YouTube from "react-youtube";
+import styles from "../../css/videoplayer.module.css";
+import github from "../../Images/icon.svg";
 
-const useStyles = makeStyles({
-  root: {
-    margin: 30,
-  },
-});
+const vidoeOnReady = (event) => {
+  setTimeout(() => {
+    event.target.stopVideo();
+  }, 2000);
+  event.target.seekTo(0.01);
+
+  console.log(event.target);
+};
 
 const VideoPlayer = (props) => {
-  const classes = useStyles();
+  const opts = {
+    height: "300",
+    width: "300",
+  };
+
   return (
-    <div className={classes.root}>
-      <ReactPlayer height="300px" width="300px" controls url={props.url} />
+    <div className={styles.thumbnail}>
+      <YouTube videoId={props.url} opts={opts} onReady={vidoeOnReady} />
+      <div className={styles.video_details}>
+        <img className={styles.channel_icon} src={github} alt="icon" />
+        <p className={styles.title}>{props.subName}</p>
+      </div>
     </div>
   );
 };

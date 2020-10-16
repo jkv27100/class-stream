@@ -2,16 +2,19 @@ const UrlData = [
   {
     code: "17CS74",
     url: [
-      "https://youtu.be/YO_A1PhW3f0",
-      "https://youtu.be/p2FzAMKWv7k",
-      "https://youtu.be/tGYsvTfrFFQ",
-      "https://youtu.be/ycyMbc4LEOM",
-      "https://youtu.be/9PTqQnSecfI",
+      
+      "YO_A1PhW3f0",
+      "p2FzAMKWv7k",
+      "tGYsvTfrFFQ",
+      "ycyMbc4LEOM",
+      "9PTqQnSecfI",
+      "0tf07U5tnVQ",
+      "DPRtCh0NL9U",
     ],
   },
   {
     code: "17CS73",
-    url: ["https://youtu.be/wjB8zsSOZfU"],
+    url: ["wjB8zsSOZfU"],
   },
 ];
 export function getUrlData() {

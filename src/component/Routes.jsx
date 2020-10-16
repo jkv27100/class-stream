@@ -14,7 +14,7 @@ const Routes = (props) => {
           exact
           key={sub.code}
           path={`/${sub.code}videos`}
-          component={() => <PlayList code={sub.code} />}
+          component={() => <PlayList code={sub.code} subName={sub.sub} />}
         />
       ))}
       {props.subject.map((sub) => (

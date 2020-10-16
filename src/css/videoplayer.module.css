@@ -1,0 +1,19 @@
+.thumbnail {
+  margin: 30px;
+}
+.video_details {
+  display: flex;
+  flex-direction: row;
+}
+.channel_icon {
+  margin-right: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-color: #aaa;
+}
+.title {
+  font-size: 1.3rem;
+  color: white;
+}

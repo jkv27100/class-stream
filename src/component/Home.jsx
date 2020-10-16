@@ -18,18 +18,18 @@ const Home = (props) => {
           below platforms. feel free to give your sugguestions
         </p>
         <div className={styles.icons}>
-          <a href="/facebook">
+          <a href="https://www.google.com">
             <img className={styles.icon} src={facebook} alt="fb" />
-            <a href="/facebook">
+            <a href="https://www.google.com">
               <img className={styles.icon} src={instagram} alt="fb" />
             </a>
-            <a href="/facebook">
+            <a href="https://www.google.com">
               <img className={styles.icon} src={reddit} alt="fb" />
             </a>
-            <a href="/facebook">
+            <a href="https://www.google.com">
               <img className={styles.icon} src={linkedin} alt="fb" />
             </a>
-            <a href="/facebook">
+            <a href="https://www.google.com">
               <img className={styles.icon} src={github} alt="fb" />
             </a>
           </a>
