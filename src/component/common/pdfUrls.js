@@ -1,12 +1,11 @@
 export const links = [
   {
     subCode: "17CS71",
-    url1:
-      "https://mega.nz/folder/SRwVUSqD#CBm9Hi-aaGfhFFcXGmIffA/file/KcBnHCJB",
-    url2: "",
-    url3: "",
-    url4: "",
-    url5: "",
+    url1: "https://drive.google.com/open?id=1zWA3iDPNYF6xNbTWmtnczeoYRLlDmpa6",
+    url2: "https://drive.google.com/open?id=1pQ6h0OxXydUiORyVRyjq37aEFseXPn-r",
+    url3: "https://drive.google.com/open?id=1yyBOv_wJkvh97paHMTERkxC2hT9B1Cvk",
+    url4: "https://www.diginotes.in/study_materials/comingsoon.php",
+    url5: "https://www.diginotes.in/study_materials/comingsoon.php",
   },
   {
     subCode: "17CS72",
@@ -22,11 +21,12 @@ export const links = [
   },
   {
     subCode: "17CS73",
-    url: "https://mega.nz/folder/SRwVUSqD#CBm9Hi-aaGfhFFcXGmIffA/file/bM4UjY5S",
-    url2: "",
-    url3: "",
-    url4: "",
-    url5: "",
+    url: "https://drive.google.com/open?id=1vX10CnljEY5_Q8RxTbjFPuXiSSJdySBr",
+    url2: "https://drive.google.com/open?id=17MEYtOw4gSHwSLkSWykQA_G7ZCZp7-q_",
+    url3:
+      "https://drive.ahttps//drive.google.com/open?id=1tGetD7ouoRpLeieA-Xa6BhH4LEJxKEU6google.com/open?id=11_43U21OygVK7701LqgkuIF9aYRViSRT",
+    url4: "https://www.diginotes.in/study_materials/comingsoon.php",
+    url5: "https://drive.google.com/open?id=10FUHkC1mqncDIzNSvkSzaJy7OBEWP9S-",
   },
   {
     subCode: "17CS74",
