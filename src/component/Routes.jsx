@@ -8,7 +8,6 @@ import Home from "./Home";
 
 const Routes = (props) => {
   return (
-
     <Switch>
       {props.subject.map((sub) => (
         <Route
@@ -31,7 +30,9 @@ const Routes = (props) => {
         path="/subjects"
         component={() => <Subjects subject={props.subject} />}
       />
+      <Route exact path="/" component={Home} />
       <Route exact path="/home" component={Home} />
+
       <Route path="/notfound" component={NotFound} />
       <Redirect to="/notfound" />
     </Switch>
