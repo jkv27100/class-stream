@@ -14,9 +14,9 @@ export default function NavBar(props) {
             Subjects
           </NavLink>
           <div className="login">
-            <NavLink className="link" to="/login" activeClassName="active">
+            {/* <NavLink className="link" to="/login" activeClassName="active">
               Login
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
       </div>

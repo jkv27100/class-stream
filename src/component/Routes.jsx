@@ -5,6 +5,7 @@ import NotFound from "./NotFound";
 import PlayList from "./common/PlayList";
 import PdfList from "./common/PdfList";
 import Home from "./Home";
+import Login from "../Login";
 
 const Routes = (props) => {
   return (
@@ -32,6 +33,9 @@ const Routes = (props) => {
       />
       <Route exact path="/" component={Home} />
       <Route exact path="/home" component={Home} />
+      <Route exact path="/login">
+        <Login />
+      </Route>
 
       <Route path="/notfound" component={NotFound} />
       <Redirect to="/notfound" />
