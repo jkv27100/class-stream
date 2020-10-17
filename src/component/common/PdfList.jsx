@@ -1,13 +1,12 @@
 import React from "react";
 import { links } from "./pdfUrls";
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "/home/abi/class-stream/class-stream/src/css/card.module.css";
+import styles from "../../css/card.module.css";
 
 const PdfList = (props) => {
   return (
     <div style={{ textAlign: "center" }}>
       <div>
-        <h1>Download PDF Notes for {props.code}</h1>
+        <h1>Download PDF Notes for {props.subName}</h1>
         {console.log(props.code)}
         {/* <p>
           Download pdf for {props.code}{" "}

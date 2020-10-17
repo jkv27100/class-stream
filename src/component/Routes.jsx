@@ -8,7 +8,6 @@ import Home from "./Home";
 
 const Routes = (props) => {
   return (
-
     <Switch>
       {props.subject.map((sub) => (
         <Route
@@ -23,7 +22,7 @@ const Routes = (props) => {
           exact
           key={sub.code}
           path={`/${sub.code}pdf`}
-          component={() => <PdfList code={sub.code} />}
+          component={() => <PdfList subName={sub.sub} code={sub.code} />}
         />
       ))}
       <Route
