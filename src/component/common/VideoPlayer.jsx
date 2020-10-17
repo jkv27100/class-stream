@@ -23,7 +23,9 @@ const VideoPlayer = (props) => {
       <YouTube videoId={props.url} opts={opts} onReady={vidoeOnReady} />
       <div className={styles.video_details}>
         <img className={styles.channel_icon} src={github} alt="icon" />
-        <p className={styles.title}>{props.subName}</p>
+        <p className={styles.title}>
+          {props.subName} Session: {props.classNo}
+        </p>
       </div>
     </div>
   );
