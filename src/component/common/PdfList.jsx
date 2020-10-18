@@ -1,5 +1,5 @@
 import React from "react";
-import { links } from "./pdfUrls";
+import { links } from "../../services/pdfUrls";
 import styles from "../../css/card.module.css";
 
 const PdfList = (props) => {

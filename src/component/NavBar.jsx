@@ -1,8 +1,15 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 import "../css/navbar.css";
 
 export default function NavBar(props) {
+  const history = useHistory();
+  const handleLogout = () => {
+    localStorage.clear();
+    history.push("/login");
+    window.location.reload();
+  };
   return (
     <div>
       <div className="appbar">
@@ -14,9 +21,16 @@ export default function NavBar(props) {
             Subjects
           </NavLink>
           <div className="login">
-            <NavLink className="link" to="/login" activeClassName="active">
-              Login
-            </NavLink>
+            {!localStorage.getItem("isLoggedIn") && (
+              <NavLink className="link" to="/login" activeClassName="active">
+                Login
+              </NavLink>
+            )}
+            {localStorage.getItem("isLoggedIn") && (
+              <Button onClick={handleLogout} color="secondary">
+                LogOut
+              </Button>
+            )}
           </div>
         </div>
       </div>

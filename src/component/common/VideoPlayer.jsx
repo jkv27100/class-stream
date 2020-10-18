@@ -7,7 +7,7 @@ const vidoeOnReady = (event) => {
   setTimeout(() => {
     event.target.stopVideo();
   }, 2000);
-  event.target.seekTo(0.01);
+  event.target.seekTo(0.1);
 
   console.log(event.target);
 };
