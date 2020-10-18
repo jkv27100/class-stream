@@ -1,52 +1,25 @@
 import React, { useState } from "react";
-// import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-// import "./css/login.css";
+import { Redirect, useHistory } from "react-router-dom";
 
-// export default function Login() {
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-
-//   function validateForm() {
-//     return email.length > 0 && password.length > 0;
-//   }
-
-//   function handleSubmit(event) {
-//     event.preventDefault();
-//   }
-
-//   return (
-//     <div className="Login">
-//       <form onSubmit={handleSubmit}>
-//         <FormGroup controlId="email" bsSize="large">
-//           <ControlLabel>Email</ControlLabel>
-//           <FormControl
-//             autoFocus
-//             type="email"
-//             value={email}
-//             onChange={(e) => setEmail(e.target.value)}
-//           />
-//         </FormGroup>
-//         <FormGroup controlId="password" bsSize="large">
-//           <ControlLabel>Password</ControlLabel>
-//           <FormControl
-//             value={password}
-//             onChange={(e) => setPassword(e.target.value)}
-//             type="password"
-//           />
-//         </FormGroup>
-//         <Button block bsSize="large" disabled={!validateForm()} type="submit">
-//           Login
-//         </Button>
-//       </form>
-//     </div>
-//   );
-// }
 const Login = () => {
-    const 
-    return(
-        <>
-            <input type="number"/>
-        </>
-    )
-}
-//ongoing
+  const [pin, setPin] = useState();
+  const history = useHistory();
+  const changeHandler = (e) => {
+    setPin(e.target.value); // not needed.. refactoring neeeded.
+    if (e.target.value === "1234") {
+      history.push("/succ"); //placeholder for admin page.
+    }
+  };
+
+  return (
+    <>
+      <div style={{ textAlign: "center" }}>
+        <h2>Enter the 4 digit PIN</h2>
+
+        <input type="text" onChange={changeHandler} />
+        {/* <button onClick={checkPin}>Go</button> */}
+      </div>
+    </>
+  );
+};
+export default Login;

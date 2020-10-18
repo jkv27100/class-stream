@@ -6,6 +6,7 @@ import PlayList from "./common/PlayList";
 import PdfList from "./common/PdfList";
 import Home from "./Home";
 import Login from "../Login";
+import { Succ } from "./Succ";
 
 const Routes = (props) => {
   return (
@@ -36,7 +37,7 @@ const Routes = (props) => {
       <Route exact path="/login">
         <Login />
       </Route>
-
+      <Route exact path="/succ" component={Succ} />
       <Route path="/notfound" component={NotFound} />
       <Redirect to="/notfound" />
     </Switch>
