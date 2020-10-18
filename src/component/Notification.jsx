@@ -5,6 +5,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { annou, submissions, events } from "../Notices";
 
 const useStyles = makeStyles((theme) => ({
   root: { width: "100%" },
@@ -44,7 +45,12 @@ export default function ControlledAccordions() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>Results are out</Typography>
+          <Typography>
+            Results are out
+            {annou.map((x) => (
+              <li>{x}</li>
+            ))}
+          </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -75,14 +81,19 @@ export default function ControlledAccordions() {
           id="panel3bh-header"
         >
           <Typography className={classes.heading}>
-            Upcoming Submission
+            Upcoming Submissions
           </Typography>
           <Typography className={classes.secondaryHeading}>
             Assignment Dates
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>Assignment Deatils</Typography>
+          <Typography>
+            {" "}
+            {submissions.map((x) => (
+              <li>{x}</li>
+            ))}
+          </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -97,7 +108,12 @@ export default function ControlledAccordions() {
           <Typography className={classes.heading}>Events</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>Upcoming Evnets</Typography>
+          <Typography>
+            {" "}
+            {events.map((x) => (
+              <li>{x}</li>
+            ))}
+          </Typography>
         </AccordionDetails>
       </Accordion>
     </div>
