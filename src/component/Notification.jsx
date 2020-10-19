@@ -50,9 +50,7 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails className={classes.detail}>
           <Typography>
-            {annou.map((x) => (
-              <li>{x}</li>
-            ))}
+            {annou.map((x) => x.map((y) => <li>{y}</li>))}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -73,9 +71,7 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails className={classes.detail}>
           <Typography>
-            {notice.map((y) => (
-              <li>{y}</li>
-            ))}
+            {notice.map((x) => x.map((y) => <li>{y}</li>))}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -98,9 +94,7 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails className={classes.detail}>
           <Typography>
-            {submissions.map((x) => (
-              <li>{x}</li>
-            ))}
+            {submissions.map((x) => x.map((y) => <li>{y}</li>))}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -118,9 +112,7 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails className={classes.detail}>
           <Typography>
-            {events.map((x) => (
-              <li>{x}</li>
-            ))}
+            {events.map((x) => x.map((y) => <li>{y}</li>))}
           </Typography>
         </AccordionDetails>
       </Accordion>

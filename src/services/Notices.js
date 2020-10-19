@@ -25,10 +25,31 @@
 //   }
 // }
 // export { anns };
+import axios from "axios";
 
 const annou = [];
 const submissions = [];
 const events = [];
 const notice = [];
+let NoticeData = [];
+console.log("This is supposed to work?");
+
+const getNot = async () => {
+  await axios
+    .get("https://api.npoint.io/1a7b3689f29bf155cbe4")
+    .then((response) => ({ data: NoticeData } = response));
+  NoticeData.forEach((x) => {
+    if (x.type === "annou") {
+      annou.push(x.items);
+    }
+    if (x.type === "submissions") {
+      submissions.push(x.items);
+    }
+    if (x.type === "events") {
+      events.push(x.items);
+    }
+  });
+};
+getNot();
 
 export { annou, submissions, events, notice };

@@ -14,6 +14,8 @@ class App extends Component {
     ],
     UrlData: [],
     isFetched: false,
+    NoticeData: [],
+    isFetchedNotices: false,
   };
   async componentDidMount() {
     try {
