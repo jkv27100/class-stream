@@ -16,7 +16,14 @@ const Routes = (props) => {
           exact
           key={sub.code}
           path={`/${sub.code}videos`}
-          component={() => <PlayList code={sub.code} subName={sub.sub} />}
+          component={() => (
+            <PlayList
+              code={sub.code}
+              subName={sub.sub}
+              UrlData={props.UrlData}
+              isFetched={props.isFetched}
+            />
+          )}
         />
       ))}
       {props.subject.map((sub) => (

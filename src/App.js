@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Routes from "./component/Routes";
 import NavBar from "./component/NavBar";
+import axios from "axios";
 
 class App extends Component {
   state = {
@@ -11,12 +12,30 @@ class App extends Component {
       { code: "17CS74", sub: "Machine Learning" },
       { code: "17CS75", sub: "Advaned Computer Architecure" },
     ],
+    UrlData: [],
+    isFetched: false,
   };
+  async componentDidMount() {
+    try {
+      const apiEndPoint = "https://api.npoint.io/9b55a20979116003466e";
+      let { data: UrlData } = await axios.get(apiEndPoint);
+      this.setState({ UrlData });
+      let isFetched = true;
+      this.setState({ isFetched });
+    } catch (error) {
+      alert(error);
+    }
+  }
+
   render() {
     return (
       <div>
         <NavBar />
-        <Routes subject={this.state.subject} />
+        <Routes
+          subject={this.state.subject}
+          UrlData={this.state.UrlData}
+          isFetched={this.state.isFetched}
+        />
       </div>
     );
   }

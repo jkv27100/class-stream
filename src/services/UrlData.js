@@ -1,26 +1,17 @@
-const UrlData = [
-  {
-    code: "17CS74",
-    url: [
-      
-      "YO_A1PhW3f0",
-      "p2FzAMKWv7k",
-      "tGYsvTfrFFQ",
-      "ycyMbc4LEOM",
-      "9PTqQnSecfI",
-      "0tf07U5tnVQ",
-      "DPRtCh0NL9U",
-    ],
-  },
-  {
-    code: "17CS73",
-    url: ["wjB8zsSOZfU"],
-  },
-];
+let UrlData = "";
+export function setUrlData(data) {
+  UrlData = Object.values(data);
+}
 export function getUrlData() {
   return UrlData;
 }
 
-export function getUrl(code) {
+export function getUrlByCode(code) {
+  console.log(UrlData);
   return UrlData.find((m) => m.code === code);
+}
+
+export function setUrlByCode(code, link) {
+  const data = getUrlByCode(code);
+  data.url.push(link);
 }

@@ -1,6 +1,7 @@
 import React from "react";
+import { Button } from "@material-ui/core";
 import { annou, submissions, events, notice } from "../services/Notices";
-import { Button, Container } from "@material-ui/core";
+import * as UrlData from "../services/UrlData";
 
 function Admin(props) {
   const handleAnnou = (e) => {
@@ -15,25 +16,41 @@ function Admin(props) {
   };
   const handleNotice = (e) => {
     notice.push(document.getElementById("notice").value);
-    console.log(notice);
   };
   const handleClear = (array) => {
     /*clears all data from array
      */ while (array.length > 0) {
       array.pop();
     }
+  };
+  const handleLink = () => {
+    UrlData.getUrlData();
+    const typedCode = document.getElementById("code").value.toUpperCase();
+    const typedLink = document.getElementById("link");
+    const code = UrlData.getUrlByCode(typedCode);
+    if (code) {
+      UrlData.setUrlByCode(typedCode, typedLink.value);
+      typedLink.value = "";
 
-    console.log(array);
+      alert("linked uploaded!");
+    } else {
+      alert("no such code");
+    }
   };
   return (
     <React.Fragment>
-      <Container maxWidth="sm">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             marginTop: "30px",
-            width: "100%",
+            width: "50%",
           }}
         >
           <h2>Admin</h2>
@@ -94,7 +111,32 @@ function Admin(props) {
             Clear Array
           </Button>
         </div>
-      </Container>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginTop: "30px",
+            marginLeft: "30px",
+            width: "30%",
+          }}
+        >
+          <h3>Code</h3>
+          <input
+            type="text"
+            id="code"
+            style={{ marginBottom: "10px", padding: "20px" }}
+          />
+          <h3>Add Video ID</h3>
+          <input
+            type="text"
+            id="link"
+            style={{ marginBottom: "10px", padding: "20px" }}
+          />
+          <Button color="primary" variant="contained" onClick={handleLink}>
+            Add
+          </Button>
+        </div>
+      </div>
     </React.Fragment>
   );
 }

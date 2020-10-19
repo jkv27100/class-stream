@@ -1,11 +1,16 @@
 import React from "react";
 import VideoPlayer from "./VideoPlayer";
 import styles from "../../css/playlist.module.css";
-
-import * as UrlData from "../../services/UrlData";
+import { useHistory } from "react-router-dom";
 
 const PlayList = (props) => {
-  const data = UrlData.getUrl(props.code);
+  const history = useHistory();
+  if (props.isFetched === false) {
+    history.push("/");
+    window.location.reload();
+  }
+  console.log(props.isFetched);
+  const data = props.UrlData.find((m) => m.code === props.code);
   let classNo = 1;
 
   return (
