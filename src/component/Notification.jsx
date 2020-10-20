@@ -108,11 +108,11 @@ export default function ControlledAccordions() {
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-          <Typography className={classes.heading}>Events</Typography>
+          <Typography className={classes.heading}>VTU Circulars</Typography>
         </AccordionSummary>
         <AccordionDetails className={classes.detail}>
           <Typography>
-            {events.map((x) => x.map((y) => <li>{y}</li>))}
+            {events.map((x) => x.map((y) => <a href={y}>{y}</a>))}
           </Typography>
         </AccordionDetails>
       </Accordion>
