@@ -6,11 +6,11 @@ import axios from "axios";
 class App extends Component {
   state = {
     subject: [
-      { code: "17CS71", sub: "Storage Area Network" },
-      { code: "17CS72", sub: "Web Technology" },
-      { code: "17CS73", sub: "Unix System Programming" },
-      { code: "17CS74", sub: "Machine Learning" },
-      { code: "17CS75", sub: "Advaned Computer Architecure" },
+      { code: "17CS75", sub: "Storage Area Network" },
+      { code: "17CS71", sub: "Web Technology" },
+      { code: "17CS74", sub: "Unix System Programming" },
+      { code: "17CS73", sub: "Machine Learning" },
+      { code: "17CS72", sub: "Advaned Computer Architecure" },
     ],
     UrlData: [],
     isFetched: false,
