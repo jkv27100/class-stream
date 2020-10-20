@@ -14,24 +14,29 @@ const Home = (props) => {
       <div className={styles.container}>
         <img className={styles.img} src={main} alt="svg" />
         <div>
-          <h1 className={styles.h1}>Welcome to Class Stream</h1>
-          <p className={styles.p}>
-            This website is created by chandler and monica. please support us on
-            below platforms. feel free to give your sugguestions
-          </p>
+          <div className={styles.typewriter}>
+            <h1 className={styles.h1} id="h">
+              Welcome To Class Stream
+            </h1>
+          </div>
+          <div className={styles.pwriter}>
+            <p className={styles.type}>
+              Check out latest announcements from VTU and Online classes
+            </p>
+          </div>
           <div className={styles.icons}>
-            <a href="https://www.google.com">
+            <a href="https://www.facebook.com">
               <img className={styles.icon} src={facebook} alt="fb" />
-              <a href="https://www.google.com">
+              <a href="https://www.instagram.com">
                 <img className={styles.icon} src={instagram} alt="fb" />
               </a>
-              <a href="https://www.google.com">
+              <a href="https://www.reddit.com">
                 <img className={styles.icon} src={reddit} alt="fb" />
               </a>
-              <a href="https://www.google.com">
+              <a href="https://www.linkedin.com">
                 <img className={styles.icon} src={linkedin} alt="fb" />
               </a>
-              <a href="https://www.google.com">
+              <a href="https://www.github.com">
                 <img className={styles.icon} src={github} alt="fb" />
               </a>
             </a>

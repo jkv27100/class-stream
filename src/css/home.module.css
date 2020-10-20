@@ -14,9 +14,6 @@
   margin-right: 30px;
 }
 
-.h1 {
-  font-size: 40px;
-}
 .icons {
   margin-top: 80px;
   margin-left: 30px;
@@ -28,12 +25,54 @@
 .sidebar {
   display: flex;
   justify-content: flex-end;
-  margin-top: 20px;
+  margin-top: 30px;
   width: 50%;
 }
 .content {
   display: flex;
 }
+@keyframes typewriter {
+  0%,
+  100% {
+    width: 0;
+  }
+  20%,
+  80% {
+    width: 13.2em;
+  }
+}
+
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  animation: typewriter;
+  display: inline-block;
+  position: relative;
+  animation-duration: 10s;
+  animation-timing-function: steps(30, end);
+  animation-iteration-count: infinite;
+}
+
+.typewriter h1::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
 @media (max-width: 700px) {
   .container {
     flex-direction: column;
@@ -45,4 +84,84 @@
   .content {
     flex-direction: column;
   }
+}
+
+/*p effect*/
+@keyframes letters {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50ch;
+  }
+}
+@keyframes lines {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+@keyframes cursor-type {
+  50% {
+    border-color: #000;
+  }
+}
+@keyframes cursor-wait {
+  0% {
+    box-shadow: inset 2px 0 0 0 rgba(0, 0, 0, 0);
+  }
+  1% {
+    box-shadow: inset 2px 0 0 0 black;
+  }
+  40% {
+    box-shadow: inset 2px 0 0 0 black;
+  }
+}
+
+.type {
+  position: relative;
+  font-family: Consolas, Monaco, monospace;
+  width: 50ch;
+  font-size: 20px;
+  line-height: 1.2;
+  word-break: break-all;
+  overflow: hidden;
+}
+@supports (width: 1ch) {
+  .type:before,
+  .type:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    height: 1.2em;
+    width: 100%;
+    background-color: rgb(243, 240, 240);
+  }
+  .type:before {
+    border-left: 2px solid transparent;
+    top: 100%;
+    animation-name: letters, lines, cursor-type, cursor-wait;
+    animation-fill-mode: both, both, both, backwards;
+  }
+  .type:after {
+    content: "";
+    height: 100%;
+    top: 100%;
+    left: 0;
+    margin-top: 1.2em;
+  }
+}
+
+.type:before {
+  animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+  animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
+  animation-iteration-count: 1, 1, 35, 2;
+  animation-delay: 1.6s, 1.6s, 1.6s, 0s;
+}
+.type:after {
+  animation: lines 1.4285714286s steps(1, end) 1;
+  animation-fill-mode: both;
+  animation-delay: 2s;
 }
