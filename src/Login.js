@@ -14,6 +14,7 @@ const Login = () => {
   return (
     <>
       <div style={{ textAlign: "center" }}>
+        <h1>This page is for the developers</h1>
         <h2>Enter the 4 digit PIN</h2>
         <input type="text" onChange={changeHandler} />
       </div>

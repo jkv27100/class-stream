@@ -30,9 +30,8 @@ import axios from "axios";
 const annou = [];
 const submissions = [];
 const events = [];
-const notice = [];
 let NoticeData = [];
-console.log("This is supposed to work?");
+console.log("This is supposed to work?"); //lol
 
 const getNot = async () => {
   await axios
@@ -52,4 +51,4 @@ const getNot = async () => {
 };
 getNot();
 
-export { annou, submissions, events, notice };
+export { annou, submissions, events };

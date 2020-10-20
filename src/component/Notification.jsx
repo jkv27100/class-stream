@@ -5,7 +5,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { annou, submissions, events, notice } from "../services/Notices";
+import { annou, submissions, events } from "../services/Notices";
 
 const useStyles = makeStyles((theme) => ({
   root: { width: "100%" },
@@ -54,27 +54,7 @@ export default function ControlledAccordions() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion
-        className={classes.Accordion}
-        expanded={expanded === "panel2"}
-        onChange={handleChange("panel2")}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon className={classes.detail} />}
-          aria-controls="panel2bh-content"
-          id="panel2bh-header"
-        >
-          <Typography className={classes.heading}>Notice</Typography>
-          <Typography className={classes.secondaryHeading}>
-            Latest Notices
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails className={classes.detail}>
-          <Typography>
-            {notice.map((x) => x.map((y) => <li>{y}</li>))}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+
       <Accordion
         className={classes.Accordion}
         expanded={expanded === "panel3"}

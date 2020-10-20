@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@material-ui/core";
-import { annou, submissions, events, notice } from "../services/Notices";
+import { annou, submissions, events } from "../services/Notices";
 import * as UrlData from "../services/UrlData";
 
 function Admin(props) {
@@ -14,9 +14,7 @@ function Admin(props) {
   const handleEvent = (e) => {
     events.push(document.getElementById("events").value);
   };
-  const handleNotice = (e) => {
-    notice.push(document.getElementById("notice").value);
-  };
+
   const handleClear = (array) => {
     /*clears all data from array
      */ while (array.length > 0) {
@@ -70,22 +68,7 @@ function Admin(props) {
           >
             Clear Array
           </Button>
-          <h3>Notice</h3>
-          <input
-            type="text"
-            id="notice"
-            style={{ marginBottom: "10px", padding: "20px" }}
-          />
-          <Button color="primary" variant="contained" onClick={handleNotice}>
-            Add
-          </Button>
-          <Button
-            color="secondary"
-            variant="contained"
-            onClick={() => handleClear(notice)}
-          >
-            Clear Array
-          </Button>
+
           <h3>Upcoming</h3>
           <input
             type="text"
