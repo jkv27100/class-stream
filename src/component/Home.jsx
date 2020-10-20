@@ -21,7 +21,8 @@ const Home = (props) => {
           </div>
           <div className={styles.pwriter}>
             <p className={styles.type}>
-              Check out latest announcements from VTU and Online classes
+              Check out the latest announcements from VTU. Online classes are
+              available for streaming
             </p>
           </div>
           <div className={styles.icons}>

@@ -123,10 +123,9 @@
 .type {
   position: relative;
   font-family: Consolas, Monaco, monospace;
-  width: 50ch;
+  width: 100%;
   font-size: 20px;
   line-height: 1.2;
-  word-break: break-all;
   overflow: hidden;
 }
 @supports (width: 1ch) {
